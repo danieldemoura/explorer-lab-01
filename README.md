@@ -18,7 +18,7 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
 <br>
 
 <p align="center">
-  <img alt="rocketpay" src=".github/project.png" width="100%">
+  <img alt="rocketpay" src=".github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -38,6 +38,25 @@ O Rocketpay é um componente que simula o formulário de preenchimento de cartã
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/gpqavL469k0pPUGOmAQEM9/Explorer-Lab-%2301/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+
+## 📖 O que eu aprendi
+
+Eu aprendi o que são os eventos em JS, basicamente seria qualquer interação do usuário com algum elemento da página, e também como executar uma função de acordo com um evento.
+
+```
+const expirationDateMasked = IMask(inputExpirationDate, expirationDatePattern)
+expirationDateMasked.on("accept", () => {
+  updateExpirationDate(expirationDateMasked.value)
+})
+
+function updateExpirationDate(date) {
+   const ccExpiration = document.querySelector(".cc-expiration .value")
+   ccExpiration.innerText = date.length  === 0 ? "02/32" : date
+}
+```
+O expirationDateMasked é uma variável que contem a função IMask(que que recebe como argumento o valor do input e da mascara), e o "accept" é o nome do evento, e significa que quando o usuário preencher o campo, e esse valor for válido, o evento vai executar a função updateExpirationDate() que recebe como argumento "expirationDateMasked.value" o valor que o usuário digitou.
+
+A função updateExpirationDate() basicamente vai atualizar o elemento html, onde irá trocar o valor padrão pelo valor digitado pelo usuário.
 
 ## :memo: Licença
 
