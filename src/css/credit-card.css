@@ -1,7 +1,7 @@
 /* CC */
 .cc {
   background: no-repeat center/cover;
-  background-image: url("/cc-bg.svg");
+  background-image: url("/cc-bg3.svg");
   width: 36rem;
   height: 23rem;
   padding: 2rem;
@@ -11,10 +11,27 @@
   justify-content: space-between;
 }
 
+.nubank {
+  background-image: url("/cc-bg-nubank.svg");
+}
+
+.next {
+  background-image: url("/cc-bg-next.svg");
+}
+
+.inter {
+  background-image: url("/cc-bg-inter.svg");
+}
+
 .cc-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.cc-logo span {
+  display: flex;
+  gap: 0.5em;
 }
 
 .cc-info {
