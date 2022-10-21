@@ -53,13 +53,6 @@ function setCardType(type) {
       ccBgColor01.setAttribute("fill", colors[type][0])
       ccBgColor02.setAttribute("fill", colors[type][1])
   }
-
-    /*
-  ccBgColor01.setAttribute("fill", colors[type][0])
-  ccBgColor02.setAttribute("fill", colors[type][1])
-  if (type != "mastercard") {
-    ccBandeiraCartao.setAttribute("src", `cc-${type}.svg`)
-  }*/
 }
 
 const inputSecurityCode = document.querySelector("#security-code")
@@ -125,11 +118,6 @@ const cardNumberMasked = IMask(inputCardNumber, cardNumberPattern)
 
 globalThis.setCardType = setCardType
 
-const addButton = document.querySelector("#add-card")
-addButton.addEventListener("click", () => {
-  alert("Cartão Adicionado!")
-})
-
 // É assim que faz para desativar o reload do boitão submit dentro de um formulário
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault()
@@ -174,3 +162,9 @@ function updateExpirationDate(date) {
    const ccExpiration = document.querySelector(".cc-expiration .value")
    ccExpiration.innerText = date.length  === 0 ? "02/32" : date
 }
+
+const addButton = document.querySelector("#add-card")
+addButton.addEventListener("click", () => {
+ 
+    alert("Cartão Adicionado!")
+})
